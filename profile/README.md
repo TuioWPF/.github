@@ -1,83 +1,168 @@
 <div align="center">
 
-# Tuio
+<img src="https://raw.githubusercontent.com/TuioWPF/.github/main/profile/Tuio-Orange.png" alt="Tuio" width="210"/>
 
-### Tecnología para administrar, conectar y comprender negocios
+### Tecnología para operar, conectar y comprender negocios
 
-Tuio integra la operación diaria de puntos de venta con servicios en la nube,
-permitiendo que restaurantes, patios de comida y negocios con múltiples
-sucursales trabajen con continuidad y mantengan su información centralizada.
+**Tuio** es una plataforma tecnológica para la gestión de negocios que conecta la operación diaria de cada punto de venta con herramientas centralizadas en la nube.
+
+Diseñada para mantener la continuidad operativa, organizar la información y acompañar el crecimiento desde una terminal hasta múltiples sucursales.
 
 </div>
 
-## Nuestra visión
+---
 
-Construimos herramientas confiables para que cada negocio pueda concentrarse
-en atender a sus clientes. La operación principal permanece disponible en el
-local, mientras la plataforma cloud conecta sucursales, terminales y datos de
-gestión de forma segura.
+## 🟠 El ecosistema Tuio
 
-## El ecosistema Tuio
+Tuio combina operación local y servicios cloud para crear una experiencia confiable tanto para el personal que trabaja en el negocio como para quienes necesitan administrarlo.
 
-| Sistema | Función |
-| --- | --- |
-| **Tuio POS** | Aplicación de escritorio para pedidos, mesas, ventas, caja, productos, clientes e inventario. |
-| **Tuio Cloud** | Plataforma central para organizaciones, sucursales, usuarios, terminales y consolidación de información. |
-| **Tuio Sync** | Capa de sincronización que conecta cada instalación local con la nube sin convertir internet en un requisito para vender. |
+### 🖥️ Operación
+
+Herramientas para gestionar las actividades diarias del negocio:
+
+* Pedidos y mesas
+* Ventas y pagos
+* Aperturas y cierres de caja
+* Productos y categorías
+* Clientes
+* Inventario
+* Usuarios y permisos
+
+### ☁️ Gestión centralizada
+
+La plataforma cloud permite conectar la información generada en diferentes puntos de operación.
+
+Esto proporciona una base para administrar:
+
+* Organizaciones
+* Sucursales
+* Terminales
+* Usuarios
+* Configuraciones
+* Información operativa
+* Supervisión centralizada
+
+### 🔄 Sincronización
+
+Tuio está diseñado para que la operación principal no dependa permanentemente de una conexión a internet.
 
 ```text
-Operación local                 Sincronización segura                 Tuio Cloud
-
-Pedidos y mesas  ─┐
-Ventas y pagos   ─┼──> Cola local ──> Eventos verificables ──> Información centralizada
-Caja e inventario─┘
+┌─────────────────────┐
+│   Operación local   │
+│                     │
+│ Pedidos · Ventas    │
+│ Caja · Inventario   │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│   Sincronización    │
+│                     │
+│ Eventos · Control   │
+│ Reintentos · Estado │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│     Tuio Cloud      │
+│                     │
+│ Datos centralizados │
+│ Gestión · Análisis  │
+└─────────────────────┘
 ```
 
-## Diseñado para la operación real
+Cuando la conectividad se interrumpe, el negocio puede continuar trabajando localmente.
 
-- Continuidad de trabajo ante conexiones inestables o interrupciones de internet.
-- Gestión de pedidos, mesas, ventas, pagos y movimientos de caja.
-- Separación segura entre organizaciones, sucursales y terminales.
-- Sincronización gradual y tolerante a fallos, sin bloquear la atención local.
-- Trazabilidad de los eventos enviados desde cada punto de venta.
-- Base preparada para consulta y supervisión centralizada del negocio.
+Al recuperar la conexión, la información pendiente puede sincronizarse progresivamente con la plataforma central.
 
-## Principios del producto
+---
 
-**Operación primero.** Una venta local no debe depender de la disponibilidad de
-un servicio externo.
+## ⚡ Diseñado para la operación real
 
-**Seguridad por diseño.** El acceso se controla por organización, sucursal,
-usuario y permisos. Cada terminal opera únicamente dentro de su contexto.
+Tuio parte de una idea sencilla:
 
-**Datos consistentes.** Los eventos se procesan de forma idempotente para evitar
-duplicados y conservar la relación entre los registros locales y cloud.
+> **La tecnología debe acompañar la operación del negocio, no convertirse en un obstáculo para ella.**
 
-**Crecimiento ordenado.** La plataforma está pensada para acompañar desde una
-sola caja hasta operaciones con varias sucursales.
+Por eso la plataforma está diseñada alrededor de cuatro principios.
 
-## Tecnología
+### 🛡️ Continuidad
 
-El ecosistema combina una aplicación de escritorio para Windows con una
-plataforma cloud basada en .NET, ASP.NET Core, PostgreSQL y contenedores Docker.
-La comunicación entre ambos sistemas utiliza APIs autenticadas y contratos de
-sincronización versionables.
+Las operaciones esenciales permanecen disponibles localmente incluso ante conexiones inestables.
 
-## Repositorios
+### 🔐 Seguridad
 
-El software principal de Tuio se desarrolla en repositorios privados. Este
-perfil público presenta el producto y podrá alojar en el futuro documentación,
-herramientas y proyectos que la organización decida compartir con la comunidad.
+La información se organiza y controla según el contexto de cada organización, sucursal, usuario y terminal.
 
-## Contacto
+### 🔄 Consistencia
 
-Para información comercial, alianzas o soporte, utiliza los canales oficiales
-publicados en el perfil de esta organización.
+La sincronización está preparada para trabajar de forma controlada, trazable y tolerante a fallos.
+
+### 📈 Escalabilidad
+
+La arquitectura permite acompañar el crecimiento desde un único punto de venta hasta operaciones distribuidas entre varias sucursales.
+
+---
+
+## 🧩 Una plataforma preparada para crecer
+
+La arquitectura de Tuio permite incorporar progresivamente nuevas capacidades alrededor de la operación del negocio.
+
+```text
+                    TUÍO
+                      │
+        ┌─────────────┼─────────────┐
+        │             │             │
+        ▼             ▼             ▼
+   Operación       Gestión       Información
+        │             │             │
+   POS / Caja     Sucursales     Indicadores
+   Inventario     Usuarios       Reportes
+   Pedidos        Terminales     Análisis
+        │             │             │
+        └─────────────┼─────────────┘
+                      │
+                      ▼
+               Servicios Cloud
+```
+
+Esta base abre el camino hacia funcionalidades como analítica avanzada, automatización, integraciones, aplicaciones móviles y herramientas inteligentes para apoyar la toma de decisiones.
+
+---
+
+## 🚀 Visión
+
+Queremos que Tuio evolucione más allá de un sistema de punto de venta.
+
+Nuestra visión es construir una plataforma capaz de ayudar a los negocios a:
+
+**Operar** con continuidad.
+**Conectar** sus sucursales y equipos.
+**Centralizar** su información.
+**Comprender** lo que sucede en su negocio.
+**Decidir** utilizando información confiable.
+
+---
+
+## 🛠️ Tecnología
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET"/>
+<img src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white" alt="C#"/>
+<img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt="ASP.NET Core"/>
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+
+</div>
+
+La plataforma combina aplicaciones de escritorio, servicios web, APIs autenticadas, almacenamiento centralizado y mecanismos de sincronización diseñados para trabajar en conjunto.
 
 ---
 
 <div align="center">
 
-**Tuio** · Operación local, información conectada.
+### Tuio
+
+**Operación local · Información conectada · Decisiones más inteligentes**
 
 </div>
